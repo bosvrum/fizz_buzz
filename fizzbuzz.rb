@@ -1,23 +1,14 @@
+FIZZ = 'Fizz'
+BUZZ = 'Buzz'
+EMPTY = ''
+FIZZ_NUMBER = 3
+BUZZ_NUMBER = 5
+NO_REMAINDER = 0
+
 def fizzbuzz(number)
-  return "FizzBuzz" if is_divisible_by_fifteen?(number)
-  return "Buzz" if is_divisible_by_five?(number)
-  return "Fizz" if is_divisible_by_three?(number)
-  number
+	number if fizz_number? number
 end
-
-def is_divisible_by_three?(number)
-  is_divisible_by(number, 3)
-end
-
-def is_divisible_by_five?(number)
-  is_divisible_by(number, 5)
-end
-
-def is_divisible_by_fifteen?(number)
-  is_divisible_by(number, 15)
-end
-
-def is_divisible_by(number, divisor)
-  number % divisor == 0
+def fizz_number? number
+  divisible? number, FIZZ_NUMBER
 end
 
